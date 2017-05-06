@@ -136,13 +136,13 @@ public class SimpleServer {
 				}
 				else {
 //					System.out.println("getting all ads");
-					JSONArray jarr = new JSONArray();
 					for (Entry<String, Triple<String, Integer, Long>> me : ads.entrySet()){
 						vals = me.getValue();
 						JSONObject jsob = new JSONObject();
 						jsob.put("ad_content", vals.getLeft().toString());
 						jsob.put("duration", vals.getMiddle());
 						jsob.put("partner_id", me.getKey().toString());
+						JSONArray jarr = new JSONArray();
 						jarr.put(jsob);
 					}
 					t.sendResponseHeaders(200,jarr.toString().length() );

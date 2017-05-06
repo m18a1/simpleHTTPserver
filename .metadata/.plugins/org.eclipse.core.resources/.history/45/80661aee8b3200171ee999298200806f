@@ -46,7 +46,6 @@ public class SimpleServer {
 			String responseBodyStr = null;
 			OutputStream os = t.getResponseBody();
 			Triple vals = null;
-
 			
 			if (method.contains("POST")){
 				BufferedReader streamReader = new BufferedReader(new InputStreamReader(t.getRequestBody(),"UTF-8"));
@@ -136,17 +135,21 @@ public class SimpleServer {
 				}
 				else {
 //					System.out.println("getting all ads");
-					JSONArray jarr = new JSONArray();
+					StringBuilder sb = new StringBuilder();
 					for (Entry<String, Triple<String, Integer, Long>> me : ads.entrySet()){
 						vals = me.getValue();
-						JSONObject jsob = new JSONObject();
-						jsob.put("ad_content", vals.getLeft().toString());
-						jsob.put("duration", vals.getMiddle());
-						jsob.put("partner_id", me.getKey().toString());
-						jarr.put(jsob);
+						long currTime = Calendar.getInstance().getTimeInMillis()/1000;
+						Long m = Long.parseLong(vals.getMiddle().toString());
+						Long r = Long.parseLong(vals.getRight().toString());
+						long endTime = m + r;
+						sb.append("\nPartner ID: " + me.getKey());
+						sb.append("\nAd Content: " + vals.getLeft().toString());
+						if (endTime < currTime){
+							sb.append("\nThis ad is expired.");
+						}
 					}
-					t.sendResponseHeaders(200,jarr.toString().length() );
-					os.write(jarr.toString().getBytes());
+					t.sendResponseHeaders(200,sb.toString().length() );
+					os.write(sb.toString().getBytes());
 					os.close();
 				}
 			}

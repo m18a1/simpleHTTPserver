@@ -1,0 +1,46 @@
+﻿adding jar
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   ../../../../../.metadata/.log
+#	new file:   ../../../../../.metadata/.plugins/org.eclipse.core.resources/.history/a3/a09e4a3f8a320017189981660f11414e
+#	deleted:    ../../../../../.metadata/.plugins/org.eclipse.core.resources/.history/e8/30f657b64231001719a3c47b05b7884d
+#	modified:   ../../../../../.metadata/.plugins/org.eclipse.core.resources/.projects/simpleServer/.indexes/e4/81/bf/6b/history.index
+#	modified:   ../../../../../.metadata/.plugins/org.eclipse.core.resources/.projects/simpleServer/.markers
+#	deleted:    ../../../../../.metadata/.plugins/org.eclipse.core.resources/.projects/simpleServer/org.eclipse.jdt.core/state.dat
+#	modified:   ../../../../../.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index
+#	renamed:    ../../../../../.metadata/.plugins/org.eclipse.core.resources/.root/5.tree -> ../../../../../.metadata/.plugins/org.eclipse.core.resources/.root/6.tree
+#	modified:   ../../../../../.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources
+#	modified:   ../../../../../.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
+#	modified:   ../../../../../.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps
+#	modified:   ../../../../../.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt
+#	modified:   ../../../../../.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml
+#	new file:   ../../../../../.metadata/.plugins/org.eclipse.m2e.core/nexus/26522e0d83a422eed93329ece7565cfc/_4_1.del
+#	new file:   ../../../../../.metadata/.plugins/org.eclipse.m2e.core/nexus/26522e0d83a422eed93329ece7565cfc/_5.cfs
+#	modified:   ../../../../../.metadata/.plugins/org.eclipse.m2e.core/nexus/26522e0d83a422eed93329ece7565cfc/segments.gen
+#	deleted:    ../../../../../.metadata/.plugins/org.eclipse.m2e.core/nexus/26522e0d83a422eed93329ece7565cfc/segments_6
+#	new file:   ../../../../../.metadata/.plugins/org.eclipse.m2e.core/nexus/26522e0d83a422eed93329ece7565cfc/segments_7
+#	new file:   ../../../../../.metadata/.plugins/org.eclipse.m2e.core/nexus/5efb981881dcd1369755e53c56bc2f02/_3_1.del
+#	new file:   ../../../../../.metadata/.plugins/org.eclipse.m2e.core/nexus/5efb981881dcd1369755e53c56bc2f02/_4.cfs
+#	modified:   ../../../../../.metadata/.plugins/org.eclipse.m2e.core/nexus/5efb981881dcd1369755e53c56bc2f02/segments.gen
+#	deleted:    ../../../../../.metadata/.plugins/org.eclipse.m2e.core/nexus/5efb981881dcd1369755e53c56bc2f02/segments_5
+#	new file:   ../../../../../.metadata/.plugins/org.eclipse.m2e.core/nexus/5efb981881dcd1369755e53c56bc2f02/segments_6
+#	new file:   ../../../../../.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_7_1.del
+#	new file:   ../../../../../.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_8.cfs
+#	modified:   ../../../../../.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments.gen
+#	deleted:    ../../../../../.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments_9
+#	new file:   ../../../../../.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments_a
+#	modified:   ../../../../../.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser
+#	modified:   ../../../../../.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
+#	modified:   ../../../../../.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties
+#	modified:   ../../../../../.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml
+#	new file:   SimpleServer.jar
+#	modified:   ../../../../src/com/mwyatt001/simpleServer/SimpleServer.java
+#	modified:   ../../../../target/classes/META-INF/maven/simpleServer/simpleServer/pom.properties
+#	modified:   ../../../../target/classes/com/mwyatt001/simpleServer/SimpleServer$SimpleHandler.class
+#	modified:   ../../../../target/classes/com/mwyatt001/simpleServer/SimpleServer.class
+#
+
