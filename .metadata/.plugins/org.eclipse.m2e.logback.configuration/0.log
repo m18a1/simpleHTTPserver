@@ -1140,3 +1140,15 @@ java.lang.NullPointerException: null
 2017-05-06 14:14:12,735 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\M18A1\simpleHTTPServerWS\simpleServer\src\main\resources
 2017-05-06 14:14:12,737 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2017-05-06 14:14:12,745 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\M18A1\simpleHTTPServerWS\simpleServer\src\test\resources
+2017-05-06 14:31:34,082 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-06 14:31:34,097 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\M18A1\simpleHTTPServerWS\simpleServer\src\main\resources
+2017-05-06 14:31:34,103 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-06 14:31:34,109 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\M18A1\simpleHTTPServerWS\simpleServer\src\test\resources
+2017-05-06 14:31:41,289 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-06 14:31:41,295 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\M18A1\simpleHTTPServerWS\simpleServer\src\main\resources
+2017-05-06 14:31:41,297 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-06 14:31:41,302 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\M18A1\simpleHTTPServerWS\simpleServer\src\test\resources
+2017-05-06 14:34:30,948 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-06 14:34:30,952 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\M18A1\simpleHTTPServerWS\simpleServer\src\main\resources
+2017-05-06 14:34:30,953 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-05-06 14:34:30,957 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\M18A1\simpleHTTPServerWS\simpleServer\src\test\resources

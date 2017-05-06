@@ -24,6 +24,7 @@ import org.json.JSONObject;
 
 public class SimpleServer {
 	static Map<String,Triple<String,Integer,Long>> ads = new HashMap<String,Triple<String,Integer,Long>>();
+	//public static void main(String[] args) throws IOException{
 	//public SimpleServer() throws IOException{
 	public static void main(String[] args) throws IOException{
 		HttpServer server = HttpServer.create(new InetSocketAddress(8888), 0)	;
