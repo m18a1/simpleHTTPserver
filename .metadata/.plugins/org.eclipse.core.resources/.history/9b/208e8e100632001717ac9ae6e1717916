@@ -1,0 +1,72 @@
+package com.mwyatt001.simpleTest;
+
+import java.io.IOException;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import com.mwyatt001.simpleServer.SimpleServer;
+
+public class SimpleTest {
+	//Test Fixtures
+	private SimpleServer server;
+	
+	JSONObject jsob;
+	JSONArray jarr;
+	String part_val = "test123";
+	String ad_val = "This is not the greatest test in the world, this is just a tribute";
+	int dur_val = 500;
+	
+	String part_inval = "test/456";
+	int ad_inval = 500;
+	String dur_inval = "4";
+	
+	String part_exp = "test 789";
+	String ad_exp = "Go ahead, make my day";
+	int dur_exp = 2;
+	
+	@BeforeClass
+	public void oneTimeSetUp() throws IOException
+	{
+		server = new SimpleServer();
+	}
+	
+	@Test
+	public void testAddPartnerValid(){
+		
+	}
+	
+	@Test
+	public void testAddPartnerInvalid(){
+		
+	}
+	
+	@Test
+	public void testGetPartnerValid(){
+		
+	}
+	
+	@Test
+	public void testGetPartnerExpired(){
+		
+	}
+	
+	@Test
+	public void testGetPartnerInvalid(){
+		
+	}
+	
+	@Test
+	public void testGetPartners(){
+		
+	}
+	
+	@Test
+	public void testBadCommand(){
+		
+	}
+	
+
+}

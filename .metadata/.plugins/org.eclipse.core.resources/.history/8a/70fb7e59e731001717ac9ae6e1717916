@@ -1,0 +1,56 @@
+package com.mwyatt001.simpleTest;
+
+import java.io.IOException;
+
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import com.mwyatt001.simpleServer.SimpleServer;
+
+public class SimpleTest {
+	//Test Fixtures
+	private SimpleServer server;
+	
+	@BeforeClass
+	public void oneTimeSetUp() throws IOException
+	{
+		server = new SimpleServer();
+	}
+	
+	@Test
+	public void testAddPartnerValid(){
+		
+	}
+	
+	@Test
+	public void testAddPartnerInvalid(){
+		
+	}
+	
+	@Test
+	public void testGetPartnerValid(){
+		
+	}
+	
+	@Test
+	public void testGetPartnerExpired(){
+		
+	}
+	
+	@Test
+	public void testGetPartnerInvalid(){
+		
+	}
+	
+	@Test
+	public void testGetPartners(){
+		
+	}
+	
+	@Test
+	public void testBadCommand(){
+		
+	}
+	
+
+}

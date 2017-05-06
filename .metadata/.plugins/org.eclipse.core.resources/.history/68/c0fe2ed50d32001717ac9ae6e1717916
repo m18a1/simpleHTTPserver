@@ -1,0 +1,96 @@
+package com.mwyatt001.simpleTest;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.HttpURLConnection;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import com.mwyatt001.simpleServer.SimpleServer;
+import com.sun.net.httpserver.HttpExchange;
+
+public class SimpleTest {
+	//Test Fixtures
+	private SimpleServer server;
+	String hostname = "http://localhost:8888";
+	String charset = "UTF-8";
+	String uri_path = "/ad";
+	URL url = null;
+	
+	JSONObject jsob;
+	JSONArray jarr;
+	HttpExchange hEx;
+	String part_val = "test123";
+	String ad_val = "This is not the greatest test in the world, this is just a tribute";
+	int dur_val = 500;
+	
+	String part_inval = "test/456";
+	int ad_inval = 500;
+	String dur_inval = "4";
+	
+	String part_exp = "test 789";
+	String ad_exp = "Go ahead, make my day";
+	int dur_exp = 2;
+	
+	@BeforeClass
+	public void oneTimeSetUp() throws IOException
+	{
+		server = new SimpleServer();
+		try{
+			url = new URL(hostname);
+		} catch (MalformedURLException e){
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void testAddPartnerValid() throws IOException{
+		jsob = new JSONObject();
+		jsob.put("partner_id", part_val);
+		jsob.put("ad_content",ad_val);
+		jsob.put("duration", dur_val);
+		
+		HttpURLConnection urlConn = (HttpURLConnection) url.openConnection();
+		
+	}
+	
+	@Test
+	public void testAddPartnerInvalid(){
+		jsob = new JSONObject();
+		jsob.put("partner_id",part_inval);
+		jsob.put("ad_content",ad_inval);
+		jsob.put("duration",dur_inval);
+		
+	}
+	
+	@Test
+	public void testGetPartnerValid(){
+		URLConnection urlConn = new URL(url).openConnection();
+	}
+	
+	@Test
+	public void testGetPartnerExpired(){
+		URLConnection urlConn = new URL(url).openConnection();
+	}
+	
+	@Test
+	public void testGetPartnerInvalid(){
+		URLConnection urlConn = new URL(url).openConnection();
+	}
+	
+	@Test
+	public void testGetPartners(){
+		URLConnection urlConn = new URL(url).openConnection();
+	}
+	
+	@Test
+	public void testBadCommand(){
+		URLConnection urlConn = new URL(url).openConnection();
+	}
+	
+
+}

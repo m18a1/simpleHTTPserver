@@ -1,0 +1,11 @@
+package com.mwyatt001.simpleTest;
+
+import com.mwyatt001.simpleServer.SimpleServer;
+
+public class SimpleTest {
+	//Test Fixtures
+	private SimpleServer server;
+	
+	@Before
+	
+}

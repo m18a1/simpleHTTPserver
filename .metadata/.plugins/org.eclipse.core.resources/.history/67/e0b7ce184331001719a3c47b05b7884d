@@ -1,0 +1,116 @@
+package com.mwyatt001.simpleServer;
+/*
+ * @Author: Matt Wyatt
+ * Naive attempt at a simple HTTP server that gets/sets ad campaigns from parameters in JSON requests
+ */
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.InetSocketAddress;
+import java.util.Calendar;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Map.Entry;
+
+import com.sun.net.httpserver.HttpExchange;
+import com.sun.net.httpserver.HttpHandler;
+import com.sun.net.httpserver.HttpServer;
+import org.apache.commons.lang3.tuple.Triple;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+public class SimpleServer {
+	static Map<String,Triple<String,Integer,Long>> ads = new HashMap<String,Triple<String,Integer,Long>>();
+	public static void main(String[] args) throws IOException{
+		HttpServer server = HttpServer.create(new InetSocketAddress(8888), 0)	;
+		server.createContext("/", new SimpleHandler());
+		server.setExecutor(null);
+		System.out.println("Server started");
+		server.start();
+	}
+	
+	static class SimpleHandler implements HttpHandler{
+
+		@Override
+		public void handle(HttpExchange t) throws IOException {
+			System.out.println("Handler started");
+			String path = t.getRequestURI().getPath();
+			String[] pathSplit = path.split("/");
+			int pSize = pathSplit.length;
+			String method = t.getRequestMethod();
+			System.out.println("method= " + method);
+			JSONObject responseBodyJSON = new JSONObject();
+			JSONArray responseBodyArray = new JSONArray();
+			String responseBodyStr;
+			OutputStream os = t.getResponseBody();
+			Triple vals = null;
+			
+			if (method.contains("POST")){
+				JSONObject jsob = new JSONObject(t.getRequestBody());
+				String part_id = jsob.getString("partner_id");
+				String ad_con = jsob.getString("ad_content");
+				int dur = jsob.getInt("duration");
+				Triple<String,Integer,Long>trip = Triple.of(ad_con,dur,Calendar.getInstance().getTimeInMillis()/1000);
+				ads.put(part_id,trip);
+				responseBodyStr = "Ad campaign added for partner " + part_id;
+				t.sendResponseHeaders(200, responseBodyStr.length());
+				os.write(responseBodyStr.getBytes("utf-8"));
+				os.close();
+			}
+			else if (method.contains("GET")){
+				//determine if get all or get partner
+				if (pSize > 2){ //contains partner id
+					String part_id =pathSplit[2];
+					//check if valid partner id
+					if (ads.containsKey(part_id))	
+						vals = ads.get(part_id);
+					else{
+						responseBodyStr = "Partner not found.";
+						t.sendResponseHeaders(404, responseBodyStr.length());
+						os.write(responseBodyStr.getBytes("utf-8"));
+						os.close();
+					}
+					//check if ad is expired
+					long currTime = Calendar.getInstance().getTimeInMillis()/1000;
+					long endTime = Long.getLong(vals.getRight().toString()) + Long.getLong(vals.getMiddle().toString());
+					if (endTime <= currTime){
+						responseBodyStr = "No active campaigns for partner: " + part_id;
+						t.sendResponseHeaders(404,responseBodyStr.length());
+						os.write(responseBodyStr.getBytes());
+						os.close();
+					}
+					else{			
+						responseBodyJSON.put("partner_id", part_id);
+						responseBodyJSON.put("duration",vals.getMiddle());
+						responseBodyJSON.put("ad_content",vals.getLeft());
+						t.sendResponseHeaders(200, responseBodyJSON.toString().length());
+						os = t.getResponseBody();
+						os.write(responseBodyJSON.toString().getBytes("utf-8"));
+						os.close();
+					}
+				}
+				else {
+					for (Entry<String, Triple<String, Integer, Long>> me : ads.entrySet()){
+						vals = me.getValue();
+						JSONObject jo = new JSONObject();
+						jo.put("partner_id", me.getKey());
+						jo.put("duration",vals.getMiddle());
+						jo.put("ad_content",vals.getLeft());
+						responseBodyArray.put(jo);
+					}
+					t.sendResponseHeaders(200, responseBodyArray.toString().length());
+					os.write(responseBodyArray.toString().getBytes("utf-8"));
+					os.close();
+				}
+			}
+			else{
+				responseBodyStr = "Command not recognized.";
+				t.sendResponseHeaders(400, responseBodyStr.length());
+				os.write(responseBodyStr.getBytes("utf-8"));
+				os.close();
+			}
+			t.close();
+		}
+		
+	}
+}
