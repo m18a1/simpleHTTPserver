@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="3" ignored="0" total="8" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="118" started-at="2017-05-06T17:50:03Z" finished-at="2017-05-06T17:50:03Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="118" started-at="2017-05-06T17:50:03Z" finished-at="2017-05-06T17:50:03Z">
+      <class name="com.mwyatt001.simpleTest.SimpleTest">
+        <test-method status="PASS" signature="oneTimeSetUp()[pri:0, instance:com.mwyatt001.simpleTest.SimpleTest@561f72d0]" name="oneTimeSetUp" is-config="true" duration-ms="25" started-at="2017-05-06T13:50:03Z" finished-at="2017-05-06T13:50:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneTimeSetUp -->
+        <test-method status="FAIL" signature="testAddExistingPartner()[pri:0, instance:com.mwyatt001.simpleTest.SimpleTest@561f72d0]" name="testAddExistingPartner" duration-ms="19" started-at="2017-05-06T13:50:03Z" finished-at="2017-05-06T13:50:03Z">
+          <exception class="java.net.SocketException">
+            <message>
+              <![CDATA[Unexpected end of file from server]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.net.SocketException: Unexpected end of file from server
+	at sun.net.www.http.HttpClient.parseHTTPHeader(Unknown Source)
+	at sun.net.www.http.HttpClient.parseHTTP(Unknown Source)
+	at sun.net.www.http.HttpClient.parseHTTPHeader(Unknown Source)
+	at sun.net.www.http.HttpClient.parseHTTP(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.net.HttpURLConnection.getResponseCode(Unknown Source)
+	at com.mwyatt001.simpleTest.SimpleTest.testAddExistingPartner(SimpleTest.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.net.SocketException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddExistingPartner -->
+        <test-method status="FAIL" signature="testAddPartnerInvalid()[pri:0, instance:com.mwyatt001.simpleTest.SimpleTest@561f72d0]" name="testAddPartnerInvalid" duration-ms="3" started-at="2017-05-06T13:50:03Z" finished-at="2017-05-06T13:50:03Z">
+          <exception class="java.net.SocketException">
+            <message>
+              <![CDATA[Unexpected end of file from server]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.net.SocketException: Unexpected end of file from server
+	at sun.net.www.http.HttpClient.parseHTTPHeader(Unknown Source)
+	at sun.net.www.http.HttpClient.parseHTTP(Unknown Source)
+	at sun.net.www.http.HttpClient.parseHTTPHeader(Unknown Source)
+	at sun.net.www.http.HttpClient.parseHTTP(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.net.HttpURLConnection.getResponseCode(Unknown Source)
+	at com.mwyatt001.simpleTest.SimpleTest.testAddPartnerInvalid(SimpleTest.java:81)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.net.SocketException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddPartnerInvalid -->
+        <test-method status="PASS" signature="testBadCommand()[pri:0, instance:com.mwyatt001.simpleTest.SimpleTest@561f72d0]" name="testBadCommand" duration-ms="3" started-at="2017-05-06T13:50:03Z" finished-at="2017-05-06T13:50:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBadCommand -->
+        <test-method status="PASS" signature="testGetPartnerExpired()[pri:0, instance:com.mwyatt001.simpleTest.SimpleTest@561f72d0]" name="testGetPartnerExpired" duration-ms="3" started-at="2017-05-06T13:50:03Z" finished-at="2017-05-06T13:50:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPartnerExpired -->
+        <test-method status="PASS" signature="testGetPartnerInvalid()[pri:0, instance:com.mwyatt001.simpleTest.SimpleTest@561f72d0]" name="testGetPartnerInvalid" duration-ms="2" started-at="2017-05-06T13:50:03Z" finished-at="2017-05-06T13:50:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPartnerInvalid -->
+        <test-method status="PASS" signature="testGetPartnerValid()[pri:0, instance:com.mwyatt001.simpleTest.SimpleTest@561f72d0]" name="testGetPartnerValid" duration-ms="12" started-at="2017-05-06T13:50:03Z" finished-at="2017-05-06T13:50:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPartnerValid -->
+        <test-method status="PASS" signature="testGetPartners()[pri:0, instance:com.mwyatt001.simpleTest.SimpleTest@561f72d0]" name="testGetPartners" duration-ms="2" started-at="2017-05-06T13:50:03Z" finished-at="2017-05-06T13:50:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPartners -->
+        <test-method status="FAIL" signature="testAddPartnerValid()[pri:1, instance:com.mwyatt001.simpleTest.SimpleTest@561f72d0]" name="testAddPartnerValid" duration-ms="4" started-at="2017-05-06T13:50:03Z" finished-at="2017-05-06T13:50:03Z">
+          <exception class="java.net.SocketException">
+            <message>
+              <![CDATA[Unexpected end of file from server]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.net.SocketException: Unexpected end of file from server
+	at sun.net.www.http.HttpClient.parseHTTPHeader(Unknown Source)
+	at sun.net.www.http.HttpClient.parseHTTP(Unknown Source)
+	at sun.net.www.http.HttpClient.parseHTTPHeader(Unknown Source)
+	at sun.net.www.http.HttpClient.parseHTTP(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.net.HttpURLConnection.getResponseCode(Unknown Source)
+	at com.mwyatt001.simpleTest.SimpleTest.testAddPartnerValid(SimpleTest.java:65)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.net.SocketException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddPartnerValid -->
+      </class> <!-- com.mwyatt001.simpleTest.SimpleTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

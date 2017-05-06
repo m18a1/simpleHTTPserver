@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.mwyatt001.simpleTest.SimpleTest">
+        <methods>
+          <include name="oneTimeSetUp"/>
+          <include name="testAddExistingPartner"/>
+          <include name="testAddPartnerInvalid"/>
+          <include name="testAddPartnerValid"/>
+        </methods>
+      </class> <!-- com.mwyatt001.simpleTest.SimpleTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
